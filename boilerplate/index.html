@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+
+	<title>Crowd Cloud Boilerplate</title>
+
+	<script src="crowd://project-boilerplate/javascript.js"></script>
+	<link rel="stylesheet" href="crowd://project-boilerplate/stylesheet.css">
+
+</head>
+<body>
+
+	<h1>Crowd Cloud Boilerplate</h1>
+
+	<p>
+		All content in a crowd cloud project can be either refering
+		to http/https served content or to crowd-links.
+	</p>
+
+	<p>
+		The crowd-links have the following scheme:<br>
+		<em>crowd://discovery-server.tld/projectname/subfolder/file.png</em>
+	</p>
+
+	<p>
+		If the discovery-server gets blocked, you might want to offer
+		an alternative discovery-server ("network"). You can do so by
+		offering an <em>data-src</em> attribute containing comma-seperated
+		crowd-links:
+
+		<pre>
+			&lt;img src="crowd://blocked-server.org/projectname/image.png" data-src="crowd://alternative.com/projectname/image.png,crowd://alternative.org/projectname/image.png"&gt;
+		</pre>
+	</p>
+
+	<h3>
+		What kind of content is supported to be delivered via the crowd
+		websocket protocol?
+	</h3>
+
+	<p>
+		Currently, there are three types of content (in this early
+		prototype phase): png images, stylesheets and javascript.
+		Further content will be supported as the project improves over time.
+	</p>
+
+	<p>
+		But for now, look at this Unicorn to make you happy:
+		<br>
+		<img src="crowd://discovery.lycheejs.org/boilerplate/unicorn.png">
+	</p>
+
+</body>
+</html>
